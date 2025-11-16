@@ -1,7 +1,4 @@
-Данные для входа в PartsBD:
-http://82.97.252.229:8080
-логин: admin
-пароль: Ky5wgWDeyc2cJKS
+PartsBD находится по адресу: http://82.97.252.229:8080
 
 На компьютере где Altium, установить ODBC драйвер https://dev.mysql.com/downloads/connector/odbc/
 Нажмите Win + R → введите odbcad32.exe → OK
