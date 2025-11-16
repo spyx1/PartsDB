@@ -11,7 +11,7 @@ PartsBD находится по адресу: http://82.97.252.229:8080
         - TCP/IP Server: 82.97.252.229
         - Port: 3307
         - User: partdb
-        - Password: 
+        - Password: 23reoG487wghd
         - Database: partdb
     - Нажмите Test → должно быть "Connection successful"
 - В Altium выбрать Libraries Preferences... 
