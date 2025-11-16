@@ -26,4 +26,24 @@ sudo sh get-docker.sh
 
 #Установка Docker Compose
 sudo apt install docker-compose-plugin -y
+
+git clone https://github.com/spyx1/PartsDB.git
+cd parts-db
+
+# Запуск всех сервисов
+docker compose up -d
+
+# Проверка статуса
+docker compose ps
+
+# Подождать около 1 минуту, далее посмотреть логи и в последних строчка будет пароль admin
+docker-compose logs partdb
+
+# Если пароль не увидели, то выполнить команду для сброса пароля
+docker exec -it partdb php bin/console partdb:users:set-password admin
+
+# Создать представления для Altium
+./setup.sh
+
+
 ```
