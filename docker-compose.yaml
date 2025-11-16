@@ -1,0 +1,35 @@
+version: '3.3'
+services:
+  partdb:
+    container_name: partdb
+    ports:
+      - '8080:80'
+    volumes:
+      - ./uploads:/var/www/html/uploads
+      - ./public_media:/var/www/html/public/media
+      - ./db:/var/www/html/var/db
+    restart: unless-stopped
+    image: jbtronics/part-db1:latest
+    depends_on:
+      - database
+    environment:
+      - DATABASE_URL=mysql://partdb:23reoG487wghd@database:3306/partdb
+      - APP_ENV=docker
+      - DB_AUTOMIGRATE=true
+      - DEFAULT_LANG=ru
+
+  database:
+    container_name: partdb_database
+    image: mysql:8.0
+    restart: unless-stopped
+    command: --default-authentication-plugin=mysql_native_password --log-bin-trust-function-creators=1 --bind-address=0.0.0.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 23reoG487wghd
+      MYSQL_DATABASE: partdb
+      MYSQL_USER: partdb
+      MYSQL_PASSWORD: 23reoG487wghd
+    ports:
+      - '3307:3306'
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./sql-scripts:/docker-entrypoint-initdb.d
