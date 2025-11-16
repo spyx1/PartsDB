@@ -46,5 +46,5 @@ docker exec -it partdb php bin/console partdb:users:set-password admin
 ./setup.sh
 
 ```
-В файле sql-scripts/create-allparts.sql лежит представление для Altium, его можно менять для передачи других полей из PartsDb в Altium
-Для теста помимо представления добавляются демо данные (несколько резисторов)
+- В файле sql-scripts/create-allparts.sql лежит представление для Altium, его можно менять для передачи других полей из PartsDb в Altium
+- Для теста помимо представления добавляются демо данные (несколько резисторов)
