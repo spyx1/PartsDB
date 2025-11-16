@@ -18,7 +18,7 @@ PartsBD находится по адресу: http://82.97.252.229:8080
 - На вкладке Installed нажать Install и выбрать тип файлов .DbLib и выбрать файл PartsDB.DbLib
  - Для выбора компонентов из установленной базы выбирите в списке библиотек PartsDB.DbLib - allParts (Для теста сделал передачу только Library Ref и Description)
 
-**Установка ParsDB на сервер**
+**Установка ParsDB на новый сервер**
 ```bash
 #Установка Docker
 curl -fsSL https://get.docker.com -o get-docker.sh
