@@ -1,4 +1,4 @@
-PartsBD находится по адресу: http://82.97.252.229:8080
+Тестовый PartsBD находится по адресу: http://82.97.252.229:8080
 
 **Подключение PartsDB к Altium**
 - На компьютере где Altium, установить ODBC драйвер https://dev.mysql.com/downloads/connector/odbc/
