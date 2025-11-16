@@ -14,14 +14,11 @@ PartsBD находится по адресу: http://82.97.252.229:8080
         - Password: 
         - Database: partdb
     - Нажмите Test → должно быть "Connection successful"
+- В Altium выбрать Libraries Preferences... 
+- На вкладке Installed нажать Install и выбрать тип файлов .DbLib и выбрать файл PartsDB.DbLib
+ - Для выбора компонентов из установленной базы выбирите в списке библиотек PartsDB.DbLib - allParts (Для теста сделал передачу только Library Ref и Description)
 
-В Altium выбрать Libraries Preferences... 
-На вкладке Installed нажать Install и выбрать тип файлов .DbLib и выбрать файл PartsDB.DbLib
-Для выбора компонентов из установленной базы выбирите в списке библиотек PartsDB.DbLib - allParts
-
-Для теста сделал передачу только Library Ref и Description
-
-Установка ParsDB на сервер:
+**Установка ParsDB на сервер**
 ```bash
 #Установка Docker
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -30,5 +27,3 @@ sudo sh get-docker.sh
 #Установка Docker Compose
 sudo apt install docker-compose-plugin -y
 ```
-
-Скопировать
